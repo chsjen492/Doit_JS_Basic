@@ -24,6 +24,18 @@
 			</li>
 		</ul>
 		<div id="showResult"></div>	
-	</div>	
+	</div>
+	<script>
+		function showPrice(){
+		var originPrice = document.querySelector("#oPrice").value;
+		var rate = document.querySelector("#rate").value;
+		if(originPrice>0&&rate>0)
+		{
+			var savedPrice = originPrice*(rate/100);
+			var resultPrice = originPrice-savedPrice;
+		}
+		document.querySelector("#showResult").innerHTML = "원래 가격은 "+originPrice+"원이고, 할인된 가격은 "+savedPrice+"원이며 최종 가격은 "+resultPrice+"원 입니다.";
+	}
+	</script>
 </body>
 </html>
